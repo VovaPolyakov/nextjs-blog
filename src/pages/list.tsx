@@ -26,7 +26,7 @@ const Page: NextPage<{list:Tours[]}> = ({list}) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <ul>
-        {list.map(item => <li>Название:{item.name},Время: {item.time.toString()}</li>)}
+        {list.map(item => <li key={item.id}>Название: {item.name}, Время: {item.time.toString()}</li>)}
       </ul>
     </div>
   )
